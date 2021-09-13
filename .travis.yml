@@ -10,6 +10,7 @@ before_install:
 script:
   - docker run -e CI=true hamster4n/react-test npm test
 
+
 after_success:
   - docker build -t hamster4n/multi-client ./client
   - docker build -t hamster4n/multi-nginx ./nginx
